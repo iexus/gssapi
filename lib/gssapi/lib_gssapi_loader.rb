@@ -48,7 +48,7 @@ module GSSAPI
         gssapi_lib = 'libgssapi.so.3'
       when /darwin/
         # use Heimdal Kerberos since Mac MIT Kerberos is OLD. Do a "require 'gssapi/heimdal'" first
-        gssapi_lib = '/usr/heimdal/lib/libgssapi.dylib'
+        gssapi_lib = '/usr/local/heimdal/lib/libgssapi.dylib'
       else
         raise LoadError, "This host OS (#{host_os}) is not supported by ruby gssapi and the Heimdal libraries."
       end
